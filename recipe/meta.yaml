@@ -15,7 +15,7 @@ source:
 build:
   script: |
     {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
-  number: 0
+  number: 1
   script_env:
     - _GLIBCXX_USE_CXX11_ABI=1
     # Unset `CMAKE_GENERATOR` and let Visual Studio set to its default
@@ -54,6 +54,7 @@ test:
 about:
   home: https://github.com/metaopt/optree
   summary: Optimized PyTree Utilities
+  description: Optimized PyTree Utilities.
   dev_url: https://github.com/metaopt/optree
   doc_url: https://optree.readthedocs.io
   license: Apache-2.0
