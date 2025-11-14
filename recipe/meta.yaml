@@ -1,5 +1,5 @@
 {% set name = "optree" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5335a5ec44479920620d72324c66563bd705ab2a698605dd4b6ee67dbcad7ecd
+  sha256: 3804fb6ddc923855db2dc4805b4524c66e00f1ef30b166be4aadd52822b13e06
 
 build:
   script: |
     {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
-  number: 2
+  number: 0
   script_env:
     - _GLIBCXX_USE_CXX11_ABI=1
     # Unset `CMAKE_GENERATOR` and let Visual Studio set to its default
@@ -33,7 +33,7 @@ requirements:
     - pybind11 >=2.12
   run:
     - python
-    - typing-extensions >=4.6
+    - typing-extensions >=4.12
 
 test:
   imports:
