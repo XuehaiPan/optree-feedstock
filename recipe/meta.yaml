@@ -33,7 +33,7 @@ requirements:
     - pybind11 >=2.12
   run:
     - python
-    - typing-extensions >=4.6
+    - typing-extensions >=4.12
 
 test:
   imports:
